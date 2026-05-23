@@ -7,6 +7,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 API_KEY = os.getenv("GROQ_API_KEY")
+client = Groq(api_key=API_KEY)
 
 def extract_text(file_path):
     if file_path.lower().endswith(".pdf"):
